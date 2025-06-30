@@ -1,12 +1,38 @@
-.mHeader {
-    font-family: 'Times New Roman', Times, serif;
+.mHeader-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+}
+
+.mHeader-text{
+    font-family: "Montserrat", sans-serif !important;
     min-height: 40px;
-    padding: 5px 10px;
+    padding: 15px 10px;
     text-align: center;
-    background-color:rgb(245, 223, 77);
-    color: red;
+    color: black;
     font-size: 32px;
     font-weight: bold;
     margin-bottom: 20px;
     z-index: 100;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 1px solid black;
+    display: inline-block;
+    max-width: 14ch;
+    animation: typing 3s steps(14, end) infinite,
+    blink 0.7s step-end infinite;
+    
+
+}
+
+@keyframes typing {
+    0%{max-width: 0;}
+    50%{max-width: 14ch;}
+    100%{max-width:0;}
+}
+
+@keyframes blink {
+    50% {border-color: transparent;}
 }
