@@ -1,9 +1,59 @@
+:root {
+  --color-primary: #FFFF;      
+  --color-bg: #18181b;           
+  --color-surface: #27272a;      
+  --color-text-dark: #f4f4f5;    
+  --color-text-light: #a1a1aa;   
+  --color-accent: #22d3ee;       
+  --color-danger: #f43f5e;       
+}
+
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text-dark);
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #FFFF;
+    padding: 10;
+}
+
+.grid-container > div {
+    background-color: #18181b;
+    border: 1px solid;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    
+}
+
+.JODBTN {
+    background-color: #18181b;
+    border: none;
+    color: #FFFF;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 16px;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.JODBTN:hover {opacity: 1}
+
+
+
 .mHeader-container {
+    font-family: "Montserrat", sans-serif !important;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     height: 100%;
-
+    padding: 15px, 10px;
 }
 
 .mHeader-text{
@@ -11,28 +61,48 @@
     min-height: 40px;
     padding: 15px 10px;
     text-align: center;
-    color: black;
+    color: var(--color-primary);
     font-size: 32px;
     font-weight: bold;
     margin-bottom: 20px;
     z-index: 100;
     overflow: hidden;
     white-space: nowrap;
-    border-right: 1px solid black;
+    border-right: 1px solid var(--color-primary);
     display: inline-block;
-    max-width: 14ch;
-    animation: typing 3s steps(14, end) infinite,
-    blink 0.7s step-end infinite;
-    
-
+    animation: typing 3s steps(14,end) infinite, blink 0.7s step-end infinite;
+    max-width: 0;
 }
+
 
 @keyframes typing {
     0%{max-width: 0;}
     50%{max-width: 14ch;}
     100%{max-width:0;}
+    
 }
 
 @keyframes blink {
     50% {border-color: transparent;}
 }
+
+
+#navbar{
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+}
+
+#navbar a{ 
+    float: top;
+    display: block;
+    background-color: black;
+    color: rgb(120,120,120);
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+
+
+
+
